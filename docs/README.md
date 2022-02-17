@@ -53,7 +53,7 @@ Please have a look at [_series/phocks.md](_series/phocks.md) as an example.
 bundle exec jekyll server
 ```
 
-Open the website on https://localhost:4000 and see if your assets are displayed correctly
+Open the website on http://localhost:4000 and see if your assets are displayed correctly
 
 ### Create a Pull Request (PR)
 To create a PR, you need to add a remote repo first:
@@ -74,6 +74,6 @@ git add .
 git commit -m "Add <your phockheads name>"
 git push -f origin
 ```
-Go to https://github.com/mikeinspace/phockheads.git and you will see a button that lets you create a Pull Request. 
+At the top of this page you will see a button that lets you create a Pull Request. 
 
 Follow the steps and if done correctly your PR should be available for a review.
