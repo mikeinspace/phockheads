@@ -1,0 +1,145 @@
+---
+---
+@import "{{ site.theme }}";
+
+h3, h4 {
+  font-weight: 300;
+}
+
+h2 {
+  font-size: 2.2rem;
+}
+h3 {
+  font-size: 2rem;
+}
+h4 {
+  font-size: 1.7rem;
+}
+
+ul {
+  &.assets, &.sub-assets {
+    list-style-type: none;
+    padding: 0;
+    margin: 0; 
+
+    li {
+      max-width: 184px;
+      margin-right: 16px;
+      margin-bottom: 24px;
+      display: inline-block;
+      text-align: center;
+    }
+    img {
+      margin-bottom: 8px;
+    }
+  }
+  &.assets {
+    li {
+      width: 164px;
+    }
+  }
+  &.sub-assets {
+    li {
+      width: 128px;
+      margin-bottom: 32px;
+    }
+    a {
+      display: block;
+      overflow: hidden;
+      font-size: 0.9rem;
+    }
+  }
+}
+
+.sub-assets {
+  p {
+    margin: 0;
+  }
+}
+
+.site-title {
+  color: #7a004b !important;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: -0.1rem;
+}
+
+.m-0 {
+  margin: 0;
+}
+
+.small {
+  font-size: 0.8rem;
+}
+
+.overflow-ellipsis {
+  text-overflow: ellipsis;
+}
+
+.clearfix {
+  overflow: auto;
+}
+.grail-card, .grail-card-original {
+  margin-bottom: 36px;
+
+  h2 {
+    margin-bottom: 0;
+    font-weight: 500;
+  }
+  .author {
+    font-size: 0.9rem;
+    color: $grey-color;
+  }
+}
+
+.grail-card {
+  > div:first-of-type {
+    float: left;
+  }
+  div + div {
+    overflow: hidden;
+    padding-left: 24px;
+  }
+}
+
+.grail-card-original {
+  > div:first-of-type {
+    margin-bottom: 24px;
+  }
+}
+
+.lead {
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+@include media-query($on-palm) {
+  .grail-card {
+    > div:first-of-type {
+      float: none;
+      margin-bottom: 24px;
+    }
+    div + div {
+      overflow: auto;
+      padding-left: 0;
+    }
+    .author {
+      font-size: 1rem;
+    }
+  }
+  ul {
+    &.assets, &.sub-assets {
+      li {
+        width: auto;
+      }
+    }
+    &.sub-assets {
+      a {
+        font-size: 1rem;
+      }
+    }
+  }
+  .small {
+    font-size: 0.95rem;
+  }
+}

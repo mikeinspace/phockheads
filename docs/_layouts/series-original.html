@@ -1,0 +1,48 @@
+---
+layout: home
+---
+
+{% assign xchain = "https://xchain.io/asset" %}
+
+<div class="grail-card-original clearfix">
+  <div>
+    <h2>{{ page.name }}</h2>
+    <p class="author">by <b>{{ page.author }}</b></p>
+    <p class="lead">{{ page.description }}</p>
+    <p class="small"><a href="{{ xchain }}/{{ page.name }}" target="_blank">VIEW ON XCHAIN</a></p>
+  </div>
+  <div>
+    <img src="{{ page.image }}">
+  </div>
+</div>
+
+<h3>Subassets</h3>
+
+<h4>Series 0</h4>
+<ul class="sub-assets">
+{% assign filtered = page.subs | where: 'series', 0 %}
+{% for sub in filtered %}
+  <li>
+    <img src="{{ sub.image }}">
+    <a href="{{ xchain }}//{{ page.name }}.{{ sub.name }}" target="_blank" class="overflow-ellipsis">
+      <b>{{ page.name}}.{{ sub.name }}</b>
+    </a>
+    <p class="small">Card {{forloop.index}}, Supply {{ sub.supply }}</p>
+  </li>
+{% endfor %}
+</ul>
+
+<h4>Series 1</h4>
+<ul class="sub-assets">
+{% assign filtered = page.subs | where_exp: "item", "item.series != 0" %}
+{% for sub in filtered %}
+  <li>
+    <img src="{{ sub.image }}">
+    <a href="{{ xchain }}//{{ page.name }}.{{ sub.name }}" target="_blank" class="overflow-ellipsis">
+      <b>{{ sub.name }}</b>
+    </a>
+    <p class="small">{{ sub.author }}</p>
+    <p class="small">Card {{forloop.index}}, Supply {{ sub.supply }}</p>
+  </li>
+{% endfor %}
+</ul>

@@ -1,0 +1,7 @@
+---
+layout: null
+---
+{% raw %}{{% endraw %}{% for asset in site.series %}
+"{{ asset.name }}":{{ asset.image | jsonify }}{% if asset.subs %},{% endif %}{% assign index = asset.name | downcase  %}{% for sub in asset.subs %}
+"{{ asset.name }}.{{ sub.name }}":{{ sub.image | jsonify }}{% unless forloop.last %},{% endunless %}{% endfor %}{% unless forloop.last %},{% endunless %}
+{% endfor %}{% raw %}}{% endraw %}

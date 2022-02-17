@@ -1,0 +1,33 @@
+---
+layout: home
+---
+
+{% assign xchain = "https://xchain.io/asset" %}
+
+<div class="grail-card clearfix">
+{% if page.image != '' %}
+  <div>
+    <img src="{{ page.image }}">
+  </div>
+{% endif %}
+  <div>
+    <h2>{{ page.name }}</h2>
+    <p class="author">by <b>{{ page.author }}</b></p>
+    <p class="lead">{{ page.description }}</p>
+    <p class="small"><a href="{{ xchain }}/{{ page.name }}" target="_blank">VIEW ON XCHAIN</a></p>
+  </div>
+</div>
+
+<h3>Subassets</h3>
+
+<ul class="sub-assets">
+{% for sub in page.subs %}
+  <li>
+    <img src="{{ sub.image }}">
+    <a href="{{ xchain }}/{{ page.name }}.{{ sub.name }}" target="_blank" class="overflow-ellipsis">
+      <b>{{ sub.name }}</b>
+    </a>
+    <p class="small">Card {{forloop.index}}, Supply {{ sub.supply }}</p>
+  </li>
+{% endfor %}
+</ul>
