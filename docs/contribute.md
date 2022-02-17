@@ -40,20 +40,21 @@ subs:
 <script type="text/javascript">
 var form = document.getElementById("my-contact-form");
 var formMessage = document.getElementById("form-button");
+var formButton = document.getElementById("form-button");
 form.onsubmit = function(event) {
   event.preventDefault();
+  formMessage.innerHTML = "Sending...";
+  formMessage.disabled = true;
   var formData = new FormData(form);
   var xhr = new XMLHttpRequest();
   xhr.open("POST", form.action, true);
   xhr.onload = function(e) {
     console.log(xhr);
     if (xhr.status === 200) {
-      var formButton = document.getElementById("form-button");
       formMessage.innerHTML = "Thank you!";
-      formMessage.disabled = true;
     } else {
-      var response = JSON.parse(xhr.response);
-      formMessage.innerHTML = "Error: " + response.error;
+      formMessage.innerHTML = "Please try again!"
+      formMessage.disabled = false;
     }
   };
   xhr.send(formData);
