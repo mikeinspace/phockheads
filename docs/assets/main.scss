@@ -2,6 +2,8 @@
 ---
 @import "{{ site.theme }}";
 
+$brand-color: #7a004b;
+
 h3, h4 {
   font-weight: 300;
 }
@@ -111,6 +113,62 @@ ul {
 .lead {
   font-size: 1.2rem;
   font-weight: 300;
+}
+
+form {
+  margin-top: 32px;
+}
+
+input, textarea {
+  border:2px solid $brand-color;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  padding: 13px;
+  width: 100%;
+  font-family: Helvetica, Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+input {
+  font-weight:500;
+  font-size: 1.2rem;
+  line-height: 22px;
+  background-color: transparent;
+  transition: all 0.3s;
+  outline:0;
+}
+
+input:focus { border:2px solid darken($brand-color, 20%); }
+
+textarea {
+  font-size: 0.9rem;
+  height: 340px;
+  line-height: 150%;
+  resize: vertical;
+}
+
+button {
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  width: 100%;
+  background: $brand-color;
+  border-radius:5px;
+  border:0;
+  cursor:pointer;
+  color:white;
+  font-size: 1.3rem;
+  padding-top:10px;
+  padding-bottom:10px;
+  transition: all 0.3s;
+  margin-top:-4px;
+  font-weight:700;
+
+  &:hover {
+    background: lighten($brand-color, 5%); 
+  }
+  &[disabled] {
+    background: $grey-color;
+    cursor: default;
+  }
 }
 
 @include media-query($on-palm) {
