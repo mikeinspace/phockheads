@@ -4,15 +4,18 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+PHOCKHEADS Series 0 started as a Bitcoin parody of Namecoin's BLOCKHEADS. 
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+The interesting thing about the project is that PHOCKHEADS began regularly utilizing Counteparty's dividends feature to distribute subassets to hodlers of the grail card.
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
+![PHOCKHEADS Series 0](https://i.imgur.com/KqZHFHm.jpg){: width="400px"}
 
+This quickly became appealing to collectors and the demand for the original grail card went through the roof with the Series 1. Artists started coming in and total of 50 subassets for the series were minted.
 
-[jekyll-organization]: https://github.com/jekyll
+With Series 2, PHOCKHEADS evolved to be community-run composed of multiple grail cards by top Counterparty artists.
+
+Each artist has their unique style and will take you down their own rabbithole.
+
+Feel free to [contribute](/contribute) to the project.
+
+Also, don't forget to join us on Telegram: [https://t.me/PHOCKHEADS](https://t.me/PHOCKHEADS)
