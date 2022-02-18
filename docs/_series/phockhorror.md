@@ -3,7 +3,7 @@ name: PHOCKHORROR
 author: Pifu
 image: https://i.imgur.com/6AqBKub.gif
 date: 2022-02-13
-description: You want to get a thrill? then you need a PHOCKHORROR grail card coming with 30 iconic horror characters and future surprises.
+description: You want to get a thrill? Then you need a PHOCKHORROR grail card coming with 30 iconic horror characters and future surprises.
 subs: 
   -
     name: IT
@@ -44,8 +44,20 @@ subs:
   -
     name: SCREAM
     image: https://i.imgur.com/hdaUMuX.png
+    supply: 69  
+  -
+    name: LEATHERFACE
+    image: https://i.imgur.com/cx7OGup.png
     supply: 69
-
+  -
+    name: MICHAEL
+    image: https://i.imgur.com/92Qyp7z.png
+    supply: 69 
+  -
+    name: SADAKO
+    image: https://i.imgur.com/I5JM3HL.png
+    supply: 69
+    
 # Do NOT edit beyond here
 layout: series
 ---
