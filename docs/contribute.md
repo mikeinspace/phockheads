@@ -6,7 +6,9 @@ permalink: /contribute/
 
 If you want your phockheads featured on this website please [follow the instructions](https://github.com/mikeinspace/phockheads){:target="_blank"}.
 
-If you don't know how to use git, you may submit your work via the form below. However, we can't promise your submissions will be processed in a reasonable using this method.
+In the case you don't know how to use git, you may submit your work via the form below. However, we can't promise your submissions will be processed in a reasonable time using the following method.
+
+*Note: Please make sure your phockheads (including sub-assets) are minted before making a submission!*{: .small}
 
 <form
   action="https://usebasin.com/f/1a1d2b97c41f"
@@ -43,20 +45,23 @@ var formMessage = document.getElementById("form-button");
 var formButton = document.getElementById("form-button");
 form.onsubmit = function(event) {
   event.preventDefault();
-  formMessage.innerHTML = "Sending...";
-  formMessage.disabled = true;
-  var formData = new FormData(form);
-  var xhr = new XMLHttpRequest();
-  xhr.open("POST", form.action, true);
-  xhr.onload = function(e) {
-    console.log(xhr);
-    if (xhr.status === 200) {
-      formMessage.innerHTML = "Thank you!";
-    } else {
-      formMessage.innerHTML = "Please try again!"
-      formMessage.disabled = false;
-    }
-  };
-  xhr.send(formData);
+
+  if (confirm("Please make sure your submission is correct and confirm that your tokens are minted on the blockchain!") == true) {
+    formMessage.innerHTML = "Sending...";
+    formMessage.disabled = true;
+    var formData = new FormData(form);
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", form.action, true);
+    xhr.onload = function(e) {
+      console.log(xhr);
+      if (xhr.status === 200) {
+        formMessage.innerHTML = "Thank you!";
+      } else {
+        formMessage.innerHTML = "Please try again!"
+        formMessage.disabled = false;
+      }
+    };
+    xhr.send(formData);
+  }
 };
 </script>
