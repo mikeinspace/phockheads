@@ -16,6 +16,6 @@ With Series 2, PHOCKHEADS evolved to be community-run composed of multiple grail
 
 Each artist has their unique style and will take you down their own rabbithole.
 
-Feel free to [contribute](/contribute) to the project.
+Feel free to [contribute]({{ 'contribute' | relative_url}}) to the project.
 
 Also, don't forget to join us on Telegram: [https://t.me/PHOCKHEADS](https://t.me/PHOCKHEADS)
